@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c> 
+
+RewriteEngine On 
+RewriteBase /trail/
+RewriteRule ^([^/]*)/([^/]*)$ /trail/?id=$1&name=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)/$ /trail/?id=$1&name=$2 [L]
+</IfModule>

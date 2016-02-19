@@ -1,0 +1,8 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^6.1",
+        "mailgun/mailgun-php": "~1.7.2",
+        "google/recaptcha": "~1.1",
+        "pacely/mailchimp-apiv3": "^1.0"
+    }
+}
