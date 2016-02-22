@@ -1,7 +1,7 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../db.php"); 
 $adminPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 require("loophtml.php");
 $update = false;
 if($_GET['action'] == "edit") {

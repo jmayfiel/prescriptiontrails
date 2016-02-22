@@ -1,6 +1,6 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../../admin/db.php"); 
+require("../../../src/secure.php"); 
 $reportObj = new activity;
 $report = $reportObj->getUserReport($_SESSION['user_id']); 
 
@@ -27,14 +27,14 @@ $breadcrumb .= '&nbsp;&nbsp;<i class="fa fa-chevron-right grey-text text-darken-
   <title>Prescription Trails - New Activity</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../../../src/style_base.php"); ?>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />  
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../../../src/nav.php"); ?>
 
 <div class="container">
     <div class="row">
@@ -226,9 +226,9 @@ $breadcrumb .= '&nbsp;&nbsp;<i class="fa fa-chevron-right grey-text text-darken-
     
     
       
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../../../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../../../src/js_base.php"); ?>
 <script src="<?php echo($baseurl); ?>dashboard/favorites/js.php"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script>

@@ -1,7 +1,7 @@
 <?php
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../admin/db.php"); 
 $superPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("secure.php"); 
 
 $id = intval($_GET['id']);
 $status = $_GET['status'];

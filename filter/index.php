@@ -9,7 +9,7 @@ $page_type = "filter";
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Prescription Trails</title>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../src/style_base.php"); ?>
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
@@ -17,7 +17,7 @@ $page_type = "filter";
 
 <?php
 if(!isset($_GET['by'])) {
-	$page_type = "search"; require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); require("search.php"); //include search if filter missing
+	$page_type = "search"; require("../src/nav.php"); require("search.php"); //include search if filter missing
 } else {
 
 if($_GET['by'] == "city" || $_GET['by'] == "zip" || $_GET['by'] == "grade" || $_GET['by'] == "name" || $_GET['by'] == "coord") {
@@ -43,10 +43,10 @@ if($_GET['by'] == "city" || $_GET['by'] == "zip" || $_GET['by'] == "grade" || $_
 				} else {
 					$error = "city";
 					$page_type = "error";
-					require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php");
+					require("../src/nav.php");
 					require("error.php");
-					require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php");
-					require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php");
+					require("../src/drawer.php");
+					require("../src/js_base.php");
 					exit();
 				}
 			}
@@ -66,11 +66,11 @@ if($_GET['by'] == "city" || $_GET['by'] == "zip" || $_GET['by'] == "grade" || $_
 					if(!is_numeric($_GET['lat']) || !is_numeric($_GET['lat'])) {
 						$error = "coord";
 						$page_type = "error";
-						require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php");
+						require("../src/nav.php");
 						require("error.php");
 						echo("</div>");
-						require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php");
-						require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php");
+						require("../src/drawer.php");
+						require("../src/js_base.php");
 						exit();
 					}
 					$coords = array("lat" => $_GET['lat'], "lng" => $_GET['lng']);
@@ -104,7 +104,7 @@ if($_GET['by'] == "city" || $_GET['by'] == "zip" || $_GET['by'] == "grade" || $_
 			}
 	 }
 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php");
+require("../src/nav.php");
 ?>
 	<ul class="row collapsible white z-depth-2" style="margin-top:-50px; padding-top:0px; padding-bottom:30px;">
        <li>   
@@ -290,14 +290,14 @@ if($filterCount < 18 && $_GET['by'] != "coord") {
 <?php } ?>
 
 		</div>
-<?php } else { $page_type = "error"; $error = "by"; require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); require("error.php"); } } ?>
+<?php } else { $page_type = "error"; $error = "by"; require("../src/nav.php"); require("error.php"); } } ?>
       
       </div>
 
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); 
+<?php require("../src/js_base.php"); 
 
 if($totalMatched > 18 && $_GET['by'] != "coord") {
 ?>

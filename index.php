@@ -1,5 +1,5 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php");
+require("admin/db.php");
 
 function shuffle_assoc($list) { 
   if (!is_array($list)) return $list; 
@@ -51,6 +51,14 @@ ob_start();
     <meta property="og:site_name" content="The New Mexico Prescription Trails web site will help you find some of the best park and trail walking and wheelchair rolling paths in the state!" />
     <meta property="fb:admins" content="1279607446, 100001120322907" />
     
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.0.1/jquery.rateyo.min.js" />
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.0.1/jquery.rateyo.min.css" />
+<?php foreach($trails_next as $id => $trail) { //prefetch the next few random trail images ?>
+    <link rel="prefetch" href="<?php echo($trail['thumbURL']); ?>" />
+<?php } ?>
+<?php foreach($trails_last as $id => $trail) { ?>
+    <link rel="prefetch" href="<?php echo($trail['thumbURL']); ?>" />
+<?php } ?>
 
   <!-- CSS  -->
 <?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>

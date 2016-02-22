@@ -1,8 +1,8 @@
 <?php
 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../db.php"); 
 $adminPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 
 $ds          = DIRECTORY_SEPARATOR;  //1
 

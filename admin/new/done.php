@@ -1,7 +1,7 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../db.php"); 
 $adminPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +11,14 @@ require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php");
   <title>Prescription Trails</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../../src/style_base.php"); ?>
   
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../../src/nav.php"); ?>
 
 <div class="container" style="margin-bottom:20vh; margin-top:3vh;">
     <div class="row">
@@ -50,9 +50,9 @@ require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php");
     </div>
 </div>
       
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../../src/js_base.php"); ?>
 
   </body>
 </html>

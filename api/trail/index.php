@@ -2,7 +2,7 @@
 require("../../admin/db.php"); 
 if($_GET['maintainAdmin'] == "yes") {
 	$adminPage = true;
-	require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+	require("../../src/secure.php"); 
 }
 header('Content-Type: application/json');
 

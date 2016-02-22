@@ -1,7 +1,7 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../db.php"); 
 $adminPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 
 $db = new MysqliDb (DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 if(empty($_POST['name']) || empty($_POST['city']) || empty($_POST['zip']) || empty($_POST['crossstreets']) || empty($_POST['address']) || empty($_POST['lat']) || empty($_POST['lng']) || empty($_POST['desc']) || empty($_POST['lighting']) || empty($_POST['difficulty']) || empty($_POST['surface']) || empty($_POST['parking']) || empty($_POST['hours']) || empty($_POST['loopcount']) || empty($_POST['loop1name']) || empty($_POST['loop1distance']) || empty($_POST['loop1steps']) || empty($_POST['satImgURL']) || empty($_POST['thumbURL']) || empty($_POST['largeImgURL']) || empty($_POST['publish'])) {

@@ -1,6 +1,6 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../admin/db.php"); 
+require("../src/secure.php"); 
 $reportObj = new activity;
 $report = $reportObj->getUserReport($_SESSION['user_id']); 
 
@@ -38,14 +38,14 @@ $ActCount = count($report);
   <title>Prescription Trails - Dashboard</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../src/style_base.php"); ?>
   
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../src/nav.php"); ?>
 
 <div class="container">
     <div class="row">
@@ -219,9 +219,9 @@ $ActCount = count($report);
   </div>     
 
       
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../src/js_base.php"); ?>
 <script src="<?php echo($baseurl); ?>dashboard/favorites/js.php"></script>
 <script>
 var favoritesObj = JSON.parse("<?php echo(json_encode(array_values($_SESSION['data']['fav']))); ?>");

@@ -4,7 +4,7 @@ if(empty($_POST['type'])) {
 	die("bad request");	
 }
 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php");
+require("../admin/db.php");
 
 if($userActive) {
 

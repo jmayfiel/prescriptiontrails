@@ -1,7 +1,7 @@
 <?php
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../db.php"); 
 $adminPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 
 if($_GET['lang'] != "es" && $_GET['lang'] != "vi") {
 	header("Location: ".$baseurl."admin/?error=lang");
@@ -94,14 +94,14 @@ error_reporting(E_ERROR | E_PARSE);
   <title>Prescription Trails</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../../src/style_base.php"); ?>
   
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../../src/nav.php"); ?>
 
 <div class="container" style="margin-top:25px;">
     <div class="row">
@@ -354,9 +354,9 @@ error_reporting(E_ERROR | E_PARSE);
 </form>
 </div>
       
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../../src/js_base.php"); ?>
 
 <script>
 function copyTxt(e, id) {

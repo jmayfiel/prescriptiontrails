@@ -1,7 +1,7 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../db.php"); 
 $adminPage = true;
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 $db = new MysqliDb (DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 if(empty($_POST['desc']) || empty($_POST['surface']) || empty($_POST['parking']) || empty($_POST['facilities'])) {
 	header("Location: ".$baseurl."admin/translate/?error=true&id=".$_POST['id']."&lang=".$_POST['lang']);

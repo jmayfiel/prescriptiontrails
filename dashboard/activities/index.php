@@ -1,6 +1,6 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php");
+require("../../admin/db.php"); 
+require("../../src/secure.php");
 
 $reportObj = new activity;
 $report = $reportObj->getUserReport($_SESSION['user_id']); 
@@ -27,14 +27,14 @@ $breadcrumb .= '&nbsp;&nbsp;<i class="fa fa-chevron-right grey-text text-darken-
   <title>Prescription Trails</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../../src/style_base.php"); ?>
   
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../../src/nav.php"); ?>
 
 <div class="container">
     <div class="row">
@@ -101,9 +101,9 @@ $breadcrumb .= '&nbsp;&nbsp;<i class="fa fa-chevron-right grey-text text-darken-
 
 </div>
       
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../../src/js_base.php"); ?>
 
 
   </body>

@@ -1,4 +1,4 @@
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php");
+<?php require("../admin/db.php");
 
 
  ?>
@@ -10,14 +10,14 @@
   <title>Prescription Trails - About us!</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../src/style_base.php"); ?>
   
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../src/nav.php"); ?>
 
       <div class="container" style="margin-top:30px;">
 
@@ -111,9 +111,9 @@
       </div>
 
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../src/js_base.php"); ?>
 
 
   </body>

@@ -1,5 +1,5 @@
 <?php 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php"); 
+require("../../admin/db.php"); 
 header('Content-Type: application/json');
 
 if(!isset($_GET['offset']) || empty($_GET['count'])) {

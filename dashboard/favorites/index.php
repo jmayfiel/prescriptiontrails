@@ -1,5 +1,5 @@
 <?php require("../../admin/db.php"); 
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../src/secure.php"); 
 $special = "breadcrumb";
 $breadcrumb = '<a href="'.$baseurl.'dashboard/" class="green-text text-darken-3"><i class="fa fa-home"></i></a>&nbsp;&nbsp;<i class="fa fa-chevron-right grey-text text-darken-1" style="padding-top:1px;"></i>&nbsp;&nbsp;<a href="'.$baseurl.'dashboard/favorites/" class="green-text text-darken-3">Favorites</a>';
 ?>
@@ -11,14 +11,14 @@ $breadcrumb = '<a href="'.$baseurl.'dashboard/" class="green-text text-darken-3"
   <title>Prescription Trails</title>
 
   <!-- CSS  -->
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/style_base.php"); ?>
+<?php require("../../src/style_base.php"); ?>
   
 
 </head>
 <body class="<?php echo($bodyclass); ?>">
   
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/nav.php"); ?>
+<?php require("../../src/nav.php"); ?>
 
 <div class="container" style="min-height:70vh">
 
@@ -54,9 +54,9 @@ $breadcrumb = '<a href="'.$baseurl.'dashboard/" class="green-text text-darken-3"
     </div></div>
   </div>     
       
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/drawer.php"); ?>
+<?php require("../../src/drawer.php"); ?>
 
-<?php require("/nfs/users/clind/public_html/prescriptiontrails.org/src/js_base.php"); ?>
+<?php require("../../src/js_base.php"); ?>
 <script src="<?php echo($baseurl); ?>dashboard/favorites/js.php"></script>
 <script>
 var favoritesObj = JSON.parse("<?php echo(json_encode(array_values($_SESSION['data']['fav']))); ?>");

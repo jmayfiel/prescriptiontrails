@@ -1,6 +1,6 @@
 <?php
-require("/nfs/users/clind/public_html/prescriptiontrails.org/admin/db.php");
-require("/nfs/users/clind/public_html/prescriptiontrails.org/src/secure.php"); 
+require("../../../admin/db.php");
+require("../../../src/secure.php"); 
 header('Content-Type: application/javascript');
 ?>
 var SearchTrails = [
